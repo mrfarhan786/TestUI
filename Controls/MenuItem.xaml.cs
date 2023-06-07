@@ -25,30 +25,6 @@ namespace TestUI.Controls
             InitializeComponent();
         }
 
-        public PathGeometry Icon
-        {
-            get { return (PathGeometry)GetValue(IconProperty); }
-            set { SetValue(IconProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for Icon.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty IconProperty =
-            DependencyProperty.Register("Icon", typeof(PathGeometry), typeof(MenuItem));
-
-
-
-        public int IconWidth
-        {
-            get { return (int)GetValue(IconWidthProperty); }
-            set { SetValue(IconWidthProperty, value); }
-        }
-
-        // Using a DependencyProperty as the backing store for IconWidth.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty IconWidthProperty =
-            DependencyProperty.Register("IconWidth", typeof(int), typeof(MenuItem));
-
-
-
         public SolidColorBrush IndicatorBrush
         {
             get { return (SolidColorBrush)GetValue(IndicatorBrushProperty); }
@@ -106,6 +82,18 @@ namespace TestUI.Controls
         // Using a DependencyProperty as the backing store for IsSelected.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty IsSelectedProperty =
             DependencyProperty.Register("IsSelected", typeof(bool), typeof(MenuItem));
+
+
+
+        public string Tag
+        {
+            get { return (string)GetValue(TagProperty); }
+            set { SetValue(TagProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Tag.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TagProperty =
+            DependencyProperty.Register("Tag", typeof(string), typeof(MenuItem));
 
 
 

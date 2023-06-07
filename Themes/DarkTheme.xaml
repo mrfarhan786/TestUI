@@ -2,9 +2,20 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:TestUI.Themes">
 
+    
+    
     <!-- Background Colors -->
-    <SolidColorBrush x:Key="PrimaryBackgroundColor" Color="#131725"/>
-    <SolidColorBrush x:Key="SecundaryBackgroundColor" Color="#1d2335"/>
+    <SolidColorBrush x:Key="HeaderBackColor" Color="#301134"/>
+    <SolidColorBrush x:Key="NavbarBackColor" Color="#3F0F3F"/>
+    <SolidColorBrush x:Key="NavbarButtonBackColor" Color="#301134"/>
+    <SolidColorBrush x:Key="NavbarButtonHoverColor" Color="#999999"/>    
+    <SolidColorBrush x:Key="AppHeaderForeColor" Color="#B0B7C3"/>
+    <SolidColorBrush x:Key="AppForeColor" Color="#000000"/>
+    <SolidColorBrush x:Key="AppBackColor" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="AppHoverColor" Color="#472F48"/>
+
+    <!-- Buttons Colors -->
+    <SolidColorBrush x:Key="TransparentBack" Color="Transparent"/>
 
     <!-- Primary Colors -->
     <SolidColorBrush x:Key="PrimaryBlueColor" Color="#3772FF"/>
@@ -19,8 +30,7 @@
     <SolidColorBrush x:Key="PrimaryIconColor" Color="#B0B7C3"/>
     <SolidColorBrush x:Key="SecundaryIconColor" Color="#8A94A6"/>
     <SolidColorBrush x:Key="TertiarIconyColor" Color="#4B5D78"/>
-    <SolidColorBrush x:Key="FourthIconColor" Color="#323B4B"/>
 
-    <SolidColorBrush x:Key="btnClose" Color="#F72626"/>
+    <SolidColorBrush x:Key="btnClose" Color="#E4142C"/>
     
 </ResourceDictionary>
