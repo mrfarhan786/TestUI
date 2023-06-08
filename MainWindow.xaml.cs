@@ -94,5 +94,22 @@ namespace TestUI
                 ChannelList.Visibility = Visibility.Visible;
             }
         }
+
+        private void MessagesButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessagesList.Visibility == Visibility.Visible)
+            {
+                MessagesList.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                MessagesList.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Path_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+
+        }
     }
 }

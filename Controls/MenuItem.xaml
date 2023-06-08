@@ -70,14 +70,6 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Foreground" Value="{DynamicResource AppBackColor}"/>
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}}" Value="True">
-                    <Setter Property="Foreground" Value="{DynamicResource AppBackColor}"/>
-                </DataTrigger>
-                <DataTrigger Binding="{Binding IsChecked, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}}" Value="True">
-                    <Setter Property="Foreground" Value="{DynamicResource AppBackColor}"/>
-                </DataTrigger>
-            </Style.Triggers>
         </Style>
 
         <Style x:Key="NavButtonAddTextStyle" TargetType="{x:Type TextBlock}">

@@ -3,14 +3,16 @@
                     xmlns:local="clr-namespace:TestUI.Themes">
 
     <!-- Background Colors -->
-    <SolidColorBrush x:Key="HeaderBackColor" Color="#301134"/>
+    <SolidColorBrush x:Key="HeaderBackColor" Color="#270B28"/>
     <SolidColorBrush x:Key="NavbarBackColor" Color="#3F0F3F"/>
     <SolidColorBrush x:Key="NavbarButtonBackColor" Color="#616061"/>
-    <SolidColorBrush x:Key="NavbarButtonHoverColor" Color="#BDACBD"/>    
+    <SolidColorBrush x:Key="NavbarButtonHoverColor" Color="#BDACBD"/>
     <SolidColorBrush x:Key="AppHeaderForeColor" Color="#B0B7C3"/>
+    <SolidColorBrush x:Key="HeaderTextBoxBackColor" Color="#644565"/>
     <SolidColorBrush x:Key="AppForeColor" Color="#000000"/>
     <SolidColorBrush x:Key="AppBackColor" Color="#FFFFFF"/>
-    <SolidColorBrush x:Key="AppHoverColor" Color="#4D2A51"/>
+    <SolidColorBrush x:Key="AppHoverColor" Color="#FFFFFF" Opacity="0.1"/>
+    <SolidColorBrush x:Key="HeaderIconHoverColor" Color="#FFFFFF" Opacity="0.5"/>
     <SolidColorBrush x:Key="SelectedMenuItemColor" Color="#1164A3"/>
 
     <!-- Buttons Colors -->
