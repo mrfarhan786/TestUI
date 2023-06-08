@@ -14,7 +14,7 @@
         CaptionHeight="0"            
         ResizeBorderThickness="5" />
     </WindowChrome.WindowChrome>
-    
+
     <Grid MouseMove="MainGrid_MouseMove" MouseLeftButtonDown="MainGrid_MouseLeftButtonDown" MouseLeftButtonUp="MainGrid_MouseLeftButtonUp">
         <Grid.RowDefinitions>
             <RowDefinition Height="55"/>
@@ -27,7 +27,6 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Background="{DynamicResource HeaderBackColor}">
-            <!-- Start: Button Close | Restore | Minimize -->
             <Viewbox HorizontalAlignment="Right" VerticalAlignment="Top">
                 <StackPanel Background="{DynamicResource HeaderBackColor}" Orientation="Horizontal" FlowDirection="RightToLeft">
                     <Button x:Name="btnClose" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click" Tag="IsCloseButton"/>
@@ -35,11 +34,9 @@
                     <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
                 </StackPanel>
             </Viewbox>
-            <!-- End: Button Close | Restore | Minimize -->
         </Border>
 
         <Border Grid.Row="1" Grid.Column="0" Background="{DynamicResource NavbarBackColor}">
-            <!-- Start: MenuItem -->
             <Viewbox MaxWidth="50" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <StackPanel Orientation="Vertical" FlowDirection="RightToLeft">
                     <Button x:Name="btnHome" Margin="0,10,0,5" Style="{DynamicResource NavBarButtonStyle}" Click="btnHome_Click">
@@ -56,12 +53,11 @@
                     </Button>
                 </StackPanel>
             </Viewbox>
-            <!-- End: MenuItem -->            
         </Border>
-        <Border Grid.Row="1" Margin="0.1,0,0,0" Grid.Column="1" Background="{DynamicResource NavbarBackColor}">
+        <Border Grid.Row="1" Grid.Column="1" Margin="0.1,0,0,0" Background="{DynamicResource NavbarBackColor}">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="50"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -71,19 +67,17 @@
                     <ColumnDefinition Width="50"/>
                 </Grid.ColumnDefinitions>
 
-                <!--<TextBlock Text="Test" Style="{DynamicResource NavButtonTextStyle}"/>-->
-
-                <Button Style="{StaticResource NavButtonStyle}">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock Text="Test" Padding="10,10,10,8" VerticalAlignment="Center"/>
-                        <Border>
-                            <Path Data="{DynamicResource expand}" Fill="{DynamicResource AppHeaderForeColor}" Width="10" Margin="10" Stretch="Uniform"/>
-                        </Border>
-                    </StackPanel>
-                </Button>
-
-
-            </Grid>     
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="{DynamicResource NavbarBackColor}">
+                    <Button Style="{StaticResource NavButtonStyle}">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="Test" Padding="10,5,0,3" VerticalAlignment="Center"/>
+                            <Border>
+                                <Path Data="{DynamicResource expand}" Fill="{DynamicResource AppHeaderForeColor}" Width="10" Margin="10" Stretch="Uniform"/>
+                            </Border>
+                        </StackPanel>
+                    </Button>
+                </Border>
+            </Grid>
         </Border>
         <Frame Grid.Row="1" Grid.Column="2" Name="fContainer" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"/>
     </Grid>
