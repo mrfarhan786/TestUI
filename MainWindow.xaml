@@ -29,8 +29,8 @@
         <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Background="{DynamicResource HeaderBackColor}">
             <Viewbox HorizontalAlignment="Right" VerticalAlignment="Top">
                 <StackPanel Background="{DynamicResource HeaderBackColor}" Orientation="Horizontal" FlowDirection="RightToLeft">
-                    <Button x:Name="btnClose" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click" Tag="IsCloseButton"/>
-                    <Button x:Name="btnRestore" Style="{StaticResource IconButtonsStyle}" Content="{DynamicResource restore}" Click="btnRestore_Click"/>
+                    <Button x:Name="btnClose" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource close}" Click="btnClose_Click" Tag="IsCloseButton"/>
+                    <Button x:Name="btnRestore" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource restore}" Click="btnRestore_Click"/>
                     <Button x:Name="btnMinimize" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource minimize}" Click="btnMinimize_Click"/>
                 </StackPanel>
             </Viewbox>
@@ -58,7 +58,7 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
@@ -89,14 +89,98 @@
                 </Border>
 
                 <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0.1" Background="{DynamicResource NavbarBackColor}">
-                    <Button Style="{StaticResource NavButtonStyle}">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <TextBlock Text="Test" Padding="10,5,0,3" VerticalAlignment="Center"/>
-                            <Border>
-                                <Path Data="{DynamicResource expand}" Fill="{DynamicResource AppHeaderForeColor}" Width="10" Margin="10" Stretch="Uniform"/>
-                            </Border>
+                    <StackPanel Margin="0,10,0,0">
+                        <RadioButton Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup" IsChecked="True">
+                            <StackPanel Orientation="Horizontal">
+                                <Border>
+                                    <Path Data="{DynamicResource mention}" Fill="{DynamicResource AppBackColor}" Width="15"  Stretch="Uniform"/>
+                                </Border>
+                                <TextBlock Text="Mentions &amp; reactions" Style="{StaticResource NavRadioButtonTextStyle}"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup">
+                            <StackPanel Orientation="Horizontal">
+                                <Border>
+                                    <Path Data="{DynamicResource bookmark}" Fill="{DynamicResource AppBackColor}" Width="15" Height="14"  Stretch="Uniform"/>
+                                </Border>
+                                <TextBlock Text="Saved items" Style="{StaticResource NavRadioButtonTextStyle}"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup">
+                            <StackPanel Orientation="Horizontal">
+                                <Border>
+                                    <Path Data="{DynamicResource more}" Fill="{DynamicResource AppBackColor}" Width="15" Height="14"  Stretch="Uniform"/>
+                                </Border>
+                                <TextBlock Text="More" Style="{StaticResource NavRadioButtonTextStyle}"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="ChannelButton" Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup" Click="ChannelButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Border>
+                                    <Path Data="{DynamicResource arrowdown}" Fill="{DynamicResource AppBackColor}" Width="15" Height="6"  Stretch="Uniform"/>
+                                </Border>
+                                <TextBlock Text="Channels" Style="{StaticResource NavRadioButtonTextStyle}"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <StackPanel x:Name="ChannelList" Visibility="Collapsed" Margin="10,0,0,0">
+                            <RadioButton Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border>
+                                        <TextBlock Text="#" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                    </Border>
+                                    <TextBlock Text="Channels1" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border>
+                                        <TextBlock Text="#" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                    </Border>
+                                    <TextBlock Text="Channels2" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border>
+                                        <TextBlock Text="#" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                    </Border>
+                                    <TextBlock Text="Channels3" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border>
+                                        <TextBlock Text="#" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                    </Border>
+                                    <TextBlock Text="Channels4" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border>
+                                        <TextBlock Text="#" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                    </Border>
+                                    <TextBlock Text="Channels5" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border>
+                                        <TextBlock Text="#" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                    </Border>
+                                    <TextBlock Text="Channels6" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton Style="{StaticResource NavRadioButtonStyle}" GroupName="NavigationGroup">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border>
+                                        <TextBlock Text="#" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                    </Border>
+                                    <TextBlock Text="Channels7" Style="{StaticResource NavRadioButtonSubTextStyle}"/>
+                                </StackPanel>
+                            </RadioButton>
                         </StackPanel>
-                    </Button>
+                    </StackPanel>
                 </Border>
             </Grid>
         </Border>

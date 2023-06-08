@@ -96,6 +96,52 @@
         </Setter>
     </Style>
 
+    <Style x:Key="NavRadioButtonStyle" TargetType="RadioButton">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource NavbarButtonHoverColor}"/>        
+        <Setter Property="Margin" Value="10,0,10,0"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        Padding="{TemplateBinding Padding}" CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Left"
+                                      VerticalAlignment="Center"
+                                      Content="{TemplateBinding Content}"
+                                      Margin="{TemplateBinding Margin}"
+                                      RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource SelectedMenuItemColor}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource AppHoverColor}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NavRadioButtonTextStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="Lato"/>
+        <Setter Property="Padding" Value="8"/>
+        <Setter Property="Foreground" Value="{DynamicResource AppBackColor}"/>
+    </Style>
+    
+    <Style x:Key="NavRadioButtonSubTextStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontFamily" Value="Lato"/>
+        <Setter Property="Padding" Value="6"/>
+        <Setter Property="Foreground" Value="{DynamicResource AppBackColor}"/>
+    </Style>
+
+
     <Style x:Key="NavEditButtonStyle" TargetType="Button">
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="FontFamily" Value="Lato"/>

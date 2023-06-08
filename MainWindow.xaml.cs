@@ -82,5 +82,17 @@ namespace TestUI
             isDragging = false;
             Mouse.Capture(null);
         }
+
+        private void ChannelButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(ChannelList.Visibility == Visibility.Visible)
+            {
+                ChannelList.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                ChannelList.Visibility = Visibility.Visible;
+            }
+        }
     }
 }

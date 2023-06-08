@@ -5,14 +5,10 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                
-                <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
-
+            <ResourceDictionary.MergedDictionaries>                
+                <ResourceDictionary Source="Themes/AppTheme.xaml"/>
                 <ResourceDictionary Source="Assets/Icons.xaml"/>
-
                 <ResourceDictionary Source="Styles/MainStyle.xaml"/>
-
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
