@@ -8,7 +8,7 @@
     <SolidColorBrush x:Key="NavbarButtonBackColor" Color="#616061"/>
     <SolidColorBrush x:Key="NavbarButtonHoverColor" Color="#BDACBD"/>
     <SolidColorBrush x:Key="AppHeaderForeColor" Color="#B0B7C3"/>
-    <SolidColorBrush x:Key="HeaderTextBoxBackColor" Color="#644565"/>
+    <SolidColorBrush x:Key="HeaderTextBoxBackColor" Color="#5D3D5E"/>
     <SolidColorBrush x:Key="AppForeColor" Color="#000000"/>
     <SolidColorBrush x:Key="AppBackColor" Color="#FFFFFF"/>
     <SolidColorBrush x:Key="AppHoverColor" Color="#FFFFFF" Opacity="0.1"/>
