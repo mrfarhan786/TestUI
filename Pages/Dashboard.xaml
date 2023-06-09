@@ -9,7 +9,7 @@
       Title="Dashboard">
 
     <Border Background="{DynamicResource AppBackColor}">
-        <TextBlock Text="Dashboard" FontSize="30" Foreground="{DynamicResource AppForeColor}" FontWeight="Bold"
+        <TextBlock Text="." FontSize="30" Foreground="{DynamicResource AppForeColor}" FontWeight="Bold"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Border>
 </Page>

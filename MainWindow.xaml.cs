@@ -24,7 +24,7 @@ namespace TestUI
         public MainWindow()
         {
             InitializeComponent(); 
-            fContainer.Navigate(new System.Uri("Pages/Home.xaml", UriKind.RelativeOrAbsolute));
+            fContainer.Navigate(new System.Uri("Pages/Dashboard.xaml", UriKind.RelativeOrAbsolute));
         }
 
         // Start: Button Close | Restore | Minimize 
@@ -46,11 +46,6 @@ namespace TestUI
             WindowState = WindowState.Minimized;
         }
         // End: Button Close | Restore | Minimize
-
-        private void btnHome_Click(object sender, RoutedEventArgs e)
-        {
-            fContainer.Navigate(new System.Uri("Pages/Home.xaml", UriKind.RelativeOrAbsolute));
-        }
 
         private void btnDashboard_Click(object sender, RoutedEventArgs e)
         {
